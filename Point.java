@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class Point{
  private double x,y;
 
@@ -20,5 +22,10 @@ public class Point{
  public double getY(){
   return y;
  }  
+
+ public double distanceTo(Point other){
+  return Math.sqrt(Math.pow(other.getX() - x, 2) + Math.pow(other.getY() - y, 2));
+ }
+
 
 }
