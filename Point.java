@@ -27,5 +27,9 @@ public class Point{
   return Math.sqrt(Math.pow(other.getX() - x, 2) + Math.pow(other.getY() - y, 2));
  }
 
+ public boolean equals (Point other){
+  return (x == (other.getX()) && y == (other.getY()));
+ }
+
 
 }
