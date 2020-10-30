@@ -33,10 +33,10 @@ public class Triangle{
  }
 
  public String classify(){
-  double d1 = (Math.round(10000 * v1.distanceTo(v2)))/10000;
-  double d2 = (Math.round(10000 * v1.distanceTo(v3)))/10000;
-  double d3 = (Math.round(10000 * v2.distanceTo(v3)))/10000;
-  if (d1 == d2 && d2 == d3){
+  double d1 = ((double)Math.round(10000 * v1.distanceTo(v2)))/10000;
+  double d2 = ((double)Math.round(10000 * v1.distanceTo(v3)))/10000;
+  double d3 = ((double)Math.round(10000 * v2.distanceTo(v3)))/10000;
+  if (d1 == d2 && d2 == d3 && d1 == d3){
    return "equilateral";
   }else if (d1 == d2 || d1 == d3 || d2 == d3){
    return "isosceles";
