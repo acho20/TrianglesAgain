@@ -22,4 +22,17 @@ public class Triangle{
   return s * (s - v1.distanceTo(v2)) * (s - v1.distanceTo(v3)) * (s - v2.distanceTo(v3));
  }
 
+ public String classify(){
+  double d1 = ((double)((int)(1000 * v1.distanceTo(v2))))/1000;
+  double d2 = ((double)((int)(1000 * v1.distanceTo(v3))))/1000;
+  double d3 = ((double)((int)(1000 * v2.distanceTo(v3))))/1000;
+  if (d1 == d2 && d2 == d3){
+   return "equilateral";
+  }else if (d1 == d2 || d1 == d3 || d2 == d3){
+   return "isosceles";
+  }else{
+   return "scalene";
+  }
+ }
+
 }
