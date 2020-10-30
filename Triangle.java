@@ -24,7 +24,7 @@ public class Triangle{
  }
 
  public double getPerimeter(){
-  return v1.distanceTo(v2) + v1.distanceTo(v3) + v2.distanceTo(v1);
+  return v1.distanceTo(v2) + v1.distanceTo(v3) + v2.distanceTo(v3);
  }
 
  public double getArea(){
@@ -33,9 +33,9 @@ public class Triangle{
  }
 
  public String classify(){
-  double d1 = ((double)((int)(1000 * v1.distanceTo(v2))))/1000;
-  double d2 = ((double)((int)(1000 * v1.distanceTo(v3))))/1000;
-  double d3 = ((double)((int)(1000 * v2.distanceTo(v3))))/1000;
+  double d1 = ((double)((int)(10000 * v1.distanceTo(v2))))/10000;
+  double d2 = ((double)((int)(10000 * v1.distanceTo(v3))))/10000;
+  double d3 = ((double)((int)(10000 * v2.distanceTo(v3))))/10000;
   if (d1 == d2 && d2 == d3){
    return "equilateral";
   }else if (d1 == d2 || d1 == d3 || d2 == d3){
@@ -46,7 +46,7 @@ public class Triangle{
  }
 
  public String toString(){
-  return "v1" + v1 + "v2" + v2 + "v3" + v3;
+  return "v1" + "("+ v1.getX() + ", "+ v1.getY() + ")" + " v2" + "("+ v2.getX() + ", "+ v2.getY() + ")" + " v3" + "("+ v3.getX() + ", "+ v3.getY() + ")";
  }
 
 }
