@@ -28,8 +28,8 @@ public class Triangle{
  }
 
  public double getArea(){
-  double s = (v1.distanceTo(v2) + v1.distanceTo(v3) + v2.distanceTo(v1))/2;
-  return s * (s - v1.distanceTo(v2)) * (s - v1.distanceTo(v3)) * (s - v2.distanceTo(v3));
+  double s = (v1.distanceTo(v2) + v1.distanceTo(v3) + v2.distanceTo(v3))/2;
+  return Math.sqrt(s * (s - v1.distanceTo(v2)) * (s - v1.distanceTo(v3)) * (s - v2.distanceTo(v3)));
  }
 
  public String classify(){
